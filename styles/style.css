@@ -216,6 +216,15 @@ form{
 }
 
 
+
+@media (max-width: 500px) {
+  form{
+    width: 170%;
+  }
+
+
+}
+
 .serch-result {
   background-color: #2d4356;
   overflow-y: scroll;
