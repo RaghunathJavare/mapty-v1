@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your-Map</title>
+
+    <!-- All Links -->
+    <!-- Google fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Gentium+Book+Plus:ital@1&family=Montserrat:wght@700&family=Ubuntu:wght@300&display=swap"
+        rel="stylesheet">
+    <!-- Boostrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!-- css styleSheet -->
+    <link rel="stylesheet" href="styles/style.css" />
+
+    <!-- leafleat link -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+    <!-- All scripts -->
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/a87e8bf9f7.js" crossorigin="anonymous"></script>
+
+
+    <!-- Leaflet Library link -->
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+
+    <script type="module" defer src="js/controller.js"></script>
+</head>
+
+</head>
+
+<body>
+    <header>
+        <nav class="map-navbar">
+
+            <i class="navbar-brand">
+                <img class="map-logo" src="/images/logo.png" alt="">
+            </i>
+            <form class="d-flex search hide" role="search">
+                <input class="form-control input__city--form me-2 p-2" type="search" placeholder="search your city"
+                    aria-label="Search">
+                <button class="btn btn__get--city btn-success me-4" type="submit">Search</button>
+            </form>
+        </nav>
+    </header>
+    <main class="app">
+        <div class="serch-result">
+            <div class="data__container--1">
+                <h1>Work List</h1>
+                <div class="task-container  hide__task--container">
+                    <form class="user-task_form">
+                        <input type="text" placeholder="input your task" class="input-task">
+                    </form>
+                </div>
+
+                
+                <!-- Task -->
+                <!-- <div class=" alert container-fluid tasks mt-4">
+                    <div class="work-container">
+                        <p style="text-align:left;">23/08/2023</p>
+                        <h4>I would buy some fruit here</h4>
+                    </div>
+                    <div class="btn__close">
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"><span
+                                class="material-symbols-outlined">
+                            </span></button>
+                    </div>
+
+                </div>
+
+                <div class=" alert container-fluid tasks mt-4">
+                    <div class="work-container">
+                        <p style="text-align:left;">23/08/2023</p>
+                        <h4>I would buy some fruit here</h4>
+                    </div>
+                    <div class="btn__close">
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"><span
+                                class="material-symbols-outlined">
+                            </span></button>
+                    </div>
+
+                </div>
+
+
+                <div class=" alert container-fluid tasks mt-4">
+                    <div class="work-container">
+                        <p style="text-align:left;">23/08/2023</p>
+                        <h4>I would buy some fruit here</h4>
+                    </div>
+                    <div class="btn__close">
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"><span
+                                class="material-symbols-outlined">
+                            </span></button>
+                    </div>
+
+                </div> -->
+
+
+
+
+
+
+            </div>
+
+
+            <div class="data__container--2">
+                <button class="btn-country">Country</button>
+              
+                <div class="country--container">
+                    <div class="text-content">
+                        <h3>You can get your conunty information</h3>
+                        <p>🎌🎌🎌🎌🎌</p>
+
+                    </div>             
+                </div>
+
+            </div>
+
+
+            <div class="data__container--3">
+                <button class="btn__country--weather">Country Weather</button>
+
+                <div class="weather-container">
+                    <div class="text-content">
+                        <h3>You can get your current city weather</h3>
+                        <p>🌄🌄🌄</p>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <div class="map-container">
+            <div id="map"></div>
+        </div>
+
+
+    </main>
+
+
+
+</body>
+
+</html>
