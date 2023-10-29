@@ -37,7 +37,7 @@ export const loadCityMap = async function (city) {
       state.coords = [lat, lon];
     }
   } catch (err) {
-    console.error(err);
+    throw err;
   }
 };
 
@@ -95,12 +95,12 @@ export const getCityInfo = async function () {
 
 export const getcityWeather = async function () {
   try {
-      const [lat, lng] = state.map.mapEventCoords;
+    const [lat, lng] = state.map.mapEventCoords;
 
-      const data = await getJSON(
-        `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=${WEATHER__APIKEY}&units=metric`
-      );
-      state.weather.data = data;
+    const data = await getJSON(
+      `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=${WEATHER__APIKEY}&units=metric`
+    );
+    state.weather.data = data;
   } catch (err) {
     throw err;
   }

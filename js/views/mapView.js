@@ -7,6 +7,7 @@ class RenderMap extends ParentClass {
   _map;
   _parentElement = document.querySelector('.map-container');
   mapEvent;
+  _massageError = 'Could not found your map please try again!';
 
   render(data) {
     this._data = data;
@@ -34,7 +35,6 @@ class RenderMap extends ParentClass {
   getMapEvent(mapEvent) {
     mapTaskView.showForm();
     return (this.mapEvent = mapEvent);
-    
   }
   renderMark(data) {
     // If data is not exit

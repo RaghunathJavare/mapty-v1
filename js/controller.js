@@ -9,17 +9,21 @@ import weatherView from './views/weatherView.js';
 
 // MAP
 const controlMap = async function () {
-  mapView.removeEl();
+  try {
+    mapView.removeEl();
 
-  // Get User current coords
-  await model.getCurrentPosition();
-  // Render map
-  mapView.render(model.state.coords);
+    // Get User current coords
+    await model.getCurrentPosition();
+    // Render map
+    mapView.render(model.state.coords);
 
-  // model.state.map.markDataArr.forEach(data => {
-  //   taskListview.render(data);
-  //   mapView.renderMark(data);
-  // });
+    model.state.map.markDataArr.forEach(data => {
+      taskListview.render(data);
+      mapView.renderMark(data);
+    });
+  } catch (err) {
+    mapView.renderError();
+  }
 };
 
 controlMap();
