@@ -11,31 +11,57 @@
 }
 
 body {
+  color: #fff;
+  height: 100vh;
   background-color: black;
-  color: #ffffff85;
 }
-.error-massage{
+.error-massage {
   height: 100%;
   display: grid;
   justify-content: center;
   align-items: center;
   font-size: 1.5rem;
-  color: rgba(215, 45, 45, 0.763);
-  
-
+  color: rgba(215, 45, 45, 0.574);
 }
 
-.map-navbar{
+#navbar-form {
+  width: 90%;
+  margin: 10px;
+}
+
+.map-navbar {
   display: flex;
-  justify-content: space-between; 
-  background-color: #3686cc91;
+  justify-content: space-between;
+  background-image: linear-gradient(
+    to left top,
+    #493841,
+    #453642,
+    #3f3443,
+    #393244,
+    #313144,
+    #272e40,
+    #1f2b3a,
+    #172834,
+    #122128,
+    #0e1a1d,
+    #091213,
+    #030505
+  );
 }
 .input__city--form {
   font-size: 1.3rem;
+  border-radius: 20rem;
+}
+
+.btn__get--city {
+  margin-left: 5px;
+  border-radius: 20rem;
+
+  width: 20%;
 }
 .map-logo {
-  margin-left: 20px;
-  width: 30%;
+  margin: 10px;
+  width: 40%;
 }
 
 .heading {
@@ -52,7 +78,23 @@ main {
 }
 
 .serch-result {
-  background-color: #2d4356;
+  /* background-color: #2d4356; */
+  background-image: linear-gradient(
+    to left top,
+    #493841,
+    #453642,
+    #3f3443,
+    #393244,
+    #313144,
+    #272e40,
+    #1f2b3a,
+    #172834,
+    #122128,
+    #0e1a1d,
+    #091213,
+    #030505
+  );
+
   display: grid;
   grid-template-rows: 400px auto auto;
   overflow-y: scroll;
@@ -60,7 +102,7 @@ main {
 
 .map-container {
   background-color: #2d4356;
-} 
+}
 
 /* Task container  1️⃣ */
 
@@ -159,7 +201,6 @@ main {
 .data__container--3 {
   font-size: 3rem;
   padding: 7%;
-
 }
 .current-weather {
   font-size: 3rem;
@@ -203,44 +244,43 @@ main {
     margin-left: 20px;
     width: 40%;
   }
-  
-.input__city--form,.btn__get--city {
-  font-size: 1rem;
 
-}
-form{
-  width: 100%;
-}
-.map-navbar{
-  padding: 1%;
-}
-
-
-
-@media (max-width: 500px) {
-  form{
-    width: 170%;
+  .input__city--form,
+  .btn__get--city {
+    font-size: 1rem;
   }
 
+  .map-navbar {
+    padding: 1%;
+  }
+
+  .serch-result {
+    background-color: #2d4356;
+    overflow-y: scroll;
+    grid-column-start: 1;
+    grid-row-start: 2;
+    margin-top: 3%;
+  }
+
+  .country--container {
+    padding: 0;
+  }
+
+  #map {
+    height: 50vh;
+  }
+}
+
+@media (max-width: 500px) {
+
+
+  .map-logo {
+    margin-left: 20px;
+    width: 50%;
+  }
 
 }
 
-.serch-result {
-  background-color: #2d4356;
-  overflow-y: scroll;
-  grid-column-start: 1;
-  grid-row-start: 2;
-  margin-top: 3%;
-}
-
-
-.country--container {
-  padding: 0;
-}
-
-#map{
-  height: 50vh;
-}
 
 
 /* App Massages */
@@ -256,6 +296,4 @@ form{
 
 .task-popup .leaflet-popup-content-wrapper {
   border-left: 3px solid var(--color-brand--2);
-}
-
 }
