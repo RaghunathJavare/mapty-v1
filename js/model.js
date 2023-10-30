@@ -86,7 +86,7 @@ export const getCityInfo = async function () {
     https://restcountries.com/v3.1/name/${res.country}`);
       state.city.data = data2;
     } else {
-      alert('mark first task on your map');
+      alert('mark first work on your map');
     }
   } catch (err) {
     throw err;
